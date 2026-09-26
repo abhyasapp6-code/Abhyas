@@ -1,0 +1,82 @@
+{
+  "id": "railway-group-d-science",
+  "title": "Railway Group D General Science",
+  "demo": true,
+  "questions": [
+    {
+      "id": "RLY-GD-Q001",
+      "subject": "General Science",
+      "topic": "Physics",
+      "difficulty": "Easy",
+      "question": "What is the SI unit of force?",
+      "options": {
+        "A": "Joule",
+        "B": "Watt",
+        "C": "Newton",
+        "D": "Pascal"
+      },
+      "answer": "C",
+      "explanation": "The SI unit of force is the newton."
+    },
+    {
+      "id": "RLY-GD-Q002",
+      "subject": "General Science",
+      "topic": "Biology",
+      "difficulty": "Easy",
+      "question": "Which gas is used by humans during aerobic respiration?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Nitrogen",
+        "C": "Helium",
+        "D": "Hydrogen"
+      },
+      "answer": "A",
+      "explanation": "Oxygen is used in aerobic respiration."
+    },
+    {
+      "id": "RLY-GD-Q003",
+      "subject": "General Science",
+      "topic": "Physics",
+      "difficulty": "Easy",
+      "question": "What is the boiling point of water at standard atmospheric pressure?",
+      "options": {
+        "A": "50°C",
+        "B": "75°C",
+        "C": "100°C",
+        "D": "120°C"
+      },
+      "answer": "C",
+      "explanation": "Water boils at 100°C at standard atmospheric pressure."
+    },
+    {
+      "id": "RLY-GD-Q004",
+      "subject": "General Science",
+      "topic": "Biology",
+      "difficulty": "Easy",
+      "question": "Which organ pumps blood through the human body?",
+      "options": {
+        "A": "Lungs",
+        "B": "Heart",
+        "C": "Kidney",
+        "D": "Liver"
+      },
+      "answer": "B",
+      "explanation": "The heart pumps blood through the circulatory system."
+    },
+    {
+      "id": "RLY-GD-Q005",
+      "subject": "General Science",
+      "topic": "Biology",
+      "difficulty": "Easy",
+      "question": "Food energy is primarily stored in the form of which type of chemical energy?",
+      "options": {
+        "A": "Chemical energy",
+        "B": "Sound energy",
+        "C": "Nuclear energy",
+        "D": "Light energy"
+      },
+      "answer": "A",
+      "explanation": "Food stores energy in chemical bonds."
+    }
+  ]
+}

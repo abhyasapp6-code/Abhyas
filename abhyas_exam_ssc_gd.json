@@ -1,0 +1,82 @@
+{
+  "id": "ssc-gd-gk",
+  "title": "SSC GD General Knowledge",
+  "demo": true,
+  "questions": [
+    {
+      "id": "SSC-GD-Q001",
+      "subject": "General Knowledge",
+      "topic": "Geography",
+      "difficulty": "Easy",
+      "question": "What is the capital of India?",
+      "options": {
+        "A": "Mumbai",
+        "B": "New Delhi",
+        "C": "Kolkata",
+        "D": "Chennai"
+      },
+      "answer": "B",
+      "explanation": "New Delhi is the capital of India."
+    },
+    {
+      "id": "SSC-GD-Q002",
+      "subject": "General Knowledge",
+      "topic": "Science",
+      "difficulty": "Easy",
+      "question": "Which planet is known as the Red Planet?",
+      "options": {
+        "A": "Venus",
+        "B": "Mars",
+        "C": "Jupiter",
+        "D": "Mercury"
+      },
+      "answer": "B",
+      "explanation": "Mars is commonly called the Red Planet."
+    },
+    {
+      "id": "SSC-GD-Q003",
+      "subject": "General Knowledge",
+      "topic": "Polity",
+      "difficulty": "Easy",
+      "question": "The Constitution of India came into effect on which date?",
+      "options": {
+        "A": "15 August 1947",
+        "B": "26 November 1949",
+        "C": "26 January 1950",
+        "D": "2 October 1950"
+      },
+      "answer": "C",
+      "explanation": "It came into effect on 26 January 1950."
+    },
+    {
+      "id": "SSC-GD-Q004",
+      "subject": "General Knowledge",
+      "topic": "Geography",
+      "difficulty": "Easy",
+      "question": "Which is the largest ocean on Earth?",
+      "options": {
+        "A": "Atlantic",
+        "B": "Indian",
+        "C": "Arctic",
+        "D": "Pacific"
+      },
+      "answer": "D",
+      "explanation": "The Pacific Ocean is the largest ocean."
+    },
+    {
+      "id": "SSC-GD-Q005",
+      "subject": "General Knowledge",
+      "topic": "Culture",
+      "difficulty": "Easy",
+      "question": "Who wrote the national anthem of India?",
+      "options": {
+        "A": "Rabindranath Tagore",
+        "B": "Bankim Chandra Chattopadhyay",
+        "C": "Sarojini Naidu",
+        "D": "Subramania Bharati"
+      },
+      "answer": "A",
+      "explanation": "Rabindranath Tagore wrote Jana Gana Mana."
+    }
+  ]
+}

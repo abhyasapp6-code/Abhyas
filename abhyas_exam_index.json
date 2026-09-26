@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "exams": [
+    {
+      "id": "ssc-cgl-quant",
+      "title": "SSC CGL Quantitative Aptitude",
+      "category": "SSC CGL",
+      "questionCount": 5,
+      "status": "published"
+    },
+    {
+      "id": "ssc-gd-gk",
+      "title": "SSC GD General Knowledge",
+      "category": "SSC GD",
+      "questionCount": 5,
+      "status": "published"
+    },
+    {
+      "id": "railway-group-d-science",
+      "title": "Railway Group D General Science",
+      "category": "Railway Group D",
+      "questionCount": 5,
+      "status": "published"
+    }
+  ]
+}

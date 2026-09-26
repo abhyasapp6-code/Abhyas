@@ -1,0 +1,9 @@
+{
+  "name": "abhyas",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Abhyas government exam preparation platform",
+  "scripts": {
+    "note": "Flat upload package; app source files are intentionally named uniquely."
+  }
+}
