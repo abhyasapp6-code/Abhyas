@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bulk Mail Sender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>Bulk Mail Sender</h1>
+        <p>Personalized one-to-one emails from your browser</p>
+      </div>
+      <button id="logoutBtn" class="ghost hidden">Logout</button>
+    </header>
+
+    <section id="loginCard" class="card">
+      <h2>Login</h2>
+      <input id="email" type="email" placeholder="Email address">
+      <input id="password" type="password" placeholder="Password">
+      <div class="row">
+        <button id="loginBtn">Login</button>
+        <button id="signupBtn" class="secondary">Create account</button>
+      </div>
+      <p id="authMsg" class="msg"></p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="card">
+        <h2>1. Contacts</h2>
+        <p class="muted">CSV columns: name,email,company. Extra columns can also be used as template variables.</p>
+        <input id="csvFile" type="file" accept=".csv,text/csv">
+        <textarea id="contactsText" placeholder="Or paste contacts:
+name,email,company
+Rahul,rahul@example.com,ABC Ltd
+Amit,amit@example.com,XYZ Ltd"></textarea>
+        <div class="row">
+          <button id="parseBtn">Load Contacts</button>
+          <span id="contactCount" class="badge">0 contacts</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>2. Email</h2>
+        <input id="subject" placeholder="Subject — e.g. Proposal for {{company}}">
+        <textarea id="body" class="bodyBox" placeholder="Hi {{name}},
+
+I wanted to introduce our services to {{company}}.
+
+Regards,
+Rohit"></textarea>
+        <p class="muted">Variables are case-insensitive: {{name}}, {{email}}, {{company}}, etc.</p>
+      </div>
+
+      <div class="card">
+        <h2>3. Sender & EmailJS</h2>
+        <input id="serviceId" placeholder="EmailJS Service ID">
+        <input id="templateId" placeholder="EmailJS Template ID">
+        <input id="publicKey" placeholder="EmailJS Public Key">
+        <input id="fromName" placeholder="Sender name">
+        <p class="muted">These three EmailJS identifiers are public client-side identifiers. Never put an SMTP password or private API secret here.</p>
+      </div>
+
+      <div class="card">
+        <h2>4. Preview</h2>
+        <select id="previewSelect"></select>
+        <pre id="preview" class="preview">Load contacts to preview an email.</pre>
+      </div>
+
+      <div class="card">
+        <div class="row between">
+          <h2>5. Send</h2>
+          <span id="progress" class="badge">Ready</span>
+        </div>
+        <button id="sendBtn" class="send">Send Individual Emails</button>
+        <p class="muted">Each recipient is sent separately. The app does not place recipients in CC/BCC.</p>
+        <div id="results"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

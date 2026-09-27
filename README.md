@@ -1,35 +1,48 @@
-# Abhyas — Government Exam Preparation Platform
+# Bulk Mail Sender
 
-Starter project for SSC, CGL, SSC GD, Railway Group D, Railway NTPC and similar exams.
+This is a flat GitHub Pages project. All files are in the repository root.
 
-## Folder structure
+## Files
 
-- `user-app/` — student-facing exam/practice interface
-- `admin/` — admin management dashboard
-- `question-upload/` — bulk question upload interface
-- `data/` — exam and question data
-- `bulk-upload/pdfs/` — place question PDFs here for bulk processing
-- `bulk-upload/template/` — required PDF format and sample
-- `uploads/pdfs/` — uploaded PDFs
-- `uploads/processed/` — processed/imported files
+- `index.html`
+- `style.css`
+- `app.js`
+- `firestore.rules`
 
-## Bulk PDF question format
+## Firebase setup
 
-Use the template in `bulk-upload/template/PDF_QUESTION_FORMAT.txt`.
+1. Create a Firebase project.
+2. Enable Authentication -> Email/Password.
+3. Create a Firestore database.
+4. Add a Web App and copy its Firebase config into `app.js`.
+5. Publish the contents of `firestore.rules` as Firestore Rules.
+6. Add your GitHub Pages domain to Firebase Authentication -> Settings -> Authorized domains.
 
-Example:
+## EmailJS setup
 
-Q1. What is the capital of India?
-A) Mumbai
-B) New Delhi
-C) Kolkata
-D) Chennai
-Answer: B
-Explanation: New Delhi is the capital of India.
-Marks: 1
+Create an EmailJS service and email template.
 
-Each question should have four options, one Answer line, and optional Explanation/Marks lines.
+Template variables expected by this app:
+
+- `{{to_email}}`
+- `{{to_name}}`
+- `{{subject}}`
+- `{{message}}`
+- `{{from_name}}`
+
+Put the Service ID, Template ID and Public Key into the dashboard.
+
+## CSV format
+
+```csv
+name,email,company
+Rahul,rahul@example.com,ABC Ltd
+Amit,amit@example.com,XYZ Ltd
+Priya,priya@example.com,DEF Ltd
+```
+
+You can use any additional columns and reference them in the body with `{{column_name}}`.
 
 ## Important
 
-This is a frontend starter/scaffold. Real production authentication, database storage, PDF parsing/OCR, payment processing and secure admin authorization should be connected to a backend before production use.
+The browser sends through EmailJS. GitHub Pages cannot safely run a private SMTP credential. EmailJS/provider quotas and anti-abuse policies still apply even though this UI does not impose a recipient-count limit.

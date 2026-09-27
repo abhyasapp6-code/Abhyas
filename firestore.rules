@@ -1,0 +1,28 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function owner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    match /users/{uid}/emailLogs/{logId} {
+      allow read: if owner(uid);
+      allow create: if owner(uid);
+      allow update, delete: if false;
+    }
+
+    match /users/{uid} {
+      allow read, write: if owner(uid);
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
